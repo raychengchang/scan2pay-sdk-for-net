@@ -1,3 +1,6 @@
+
+* expired for the TLS1.2 supporting issue. Please migrate to .net 4.5
+
 # scan2pay-sdk-for-net
 .NET libraries for Scan2Pay
 
