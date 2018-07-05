@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scan2PayUtility", "Scan2Pay
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scan2PayUtilityTest", "Scan2PayUtilityTest\Scan2PayUtilityTest.csproj", "{86496F2B-8EAF-410D-8234-F340AFDEF839}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Scan2PayUtilityStd", "Scan2PayUtilityStd\Scan2PayUtilityStd.csproj", "{4E2721B0-BBE8-45EE-850A-558F7CB35F51}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{86496F2B-8EAF-410D-8234-F340AFDEF839}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{86496F2B-8EAF-410D-8234-F340AFDEF839}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{86496F2B-8EAF-410D-8234-F340AFDEF839}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4E2721B0-BBE8-45EE-850A-558F7CB35F51}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E2721B0-BBE8-45EE-850A-558F7CB35F51}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E2721B0-BBE8-45EE-850A-558F7CB35F51}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4E2721B0-BBE8-45EE-850A-558F7CB35F51}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
