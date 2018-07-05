@@ -6,6 +6,8 @@ using System.Text;
 using System.Security.Cryptography;
 using Scan2PayUtility.data;
 using Newtonsoft.Json;
+using System.Security.Cryptography.X509Certificates;
+using System.Net.Security;
 
 namespace Scan2Pay
 {
@@ -99,7 +101,10 @@ namespace Scan2Pay
         /// <returns></returns>
         private static String doPost(String url, String parameters, String encode, int timeout)
         {
-            var httpWebRequest = (HttpWebRequest)WebRequest.Create(url);
+			ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
+			ServicePointManager.ServerCertificateValidationCallback = new RemoteCertificateValidationCallback(CheckValidationResult);
+
+			var httpWebRequest = (HttpWebRequest)WebRequest.Create(url);
             httpWebRequest.ContentType = "application/json";
             httpWebRequest.Method = "POST";
 
@@ -118,7 +123,12 @@ namespace Scan2Pay
             }
         }
 
-        private static string RSAEncrypt(string data, string publicKey)
+		public static bool CheckValidationResult(object sender, X509Certificate certificate, X509Chain chain, SslPolicyErrors errors)
+		{
+			return true;
+		}
+
+		private static string RSAEncrypt(string data, string publicKey)
         {
             Encoding encoding = Encoding.UTF8;
 
